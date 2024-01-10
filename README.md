@@ -14,4 +14,10 @@ O SCM (Source Code Management/Sistema de Controle de Versão) Git é um sistema 
 
 * **Hotfix Branches:** Branches criados a partir do `main` para corrigir problemas críticos em produção rapidamente. Estes branches visam corrigir bugs urgentes sem interferir no desenvolvimento regular do `develop`.
 
+* As configurações são auternativas que podem ser acresentadas nos movimentos dos branchs,
+
+* 
+
+
+
 

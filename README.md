@@ -55,11 +55,13 @@ git flow feature finish nome-da-feature
 ```
 Este comando faz o merge (mescla) o branch de **feature** no branch **develop** e a exclui após a conclusão.
 
-<img width="943" alt="image" src="https://github.com/lsmatias/gitflow/assets/28391885/24cf48b4-efc3-4c9b-b900-922329ae2872">
+
+<img width="927" alt="image" src="https://github.com/lsmatias/gitflow/assets/28391885/c7fc00ae-a052-4b1e-8bb6-3e258120e0c6">
+
 
 Essa fase tem como objetivo garantir que a nova funcionalidade ou alteração atenda aos requisitos especificados e funcione corretamente antes de ser lançada para produção. Aqui estão alguns dos principais aspectos e atividades que geralmente ocorrem durante a validação de uma feature nesses ambientes:
 
-<img width="423" alt="image" src="https://github.com/lsmatias/gitflow/assets/28391885/0a6dee5f-4534-4402-baa3-0405d589f9f0">
+<img width="828" alt="image" src="https://github.com/lsmatias/gitflow/assets/28391885/50ff4d9c-5959-4bf4-877e-774181de5c13">
 
 > :mag_right: :shipit: Validação e Testes
 > * Testes Funcionais

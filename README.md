@@ -123,7 +123,7 @@ Este comando mescla a branch de hotfix na branch develop e master, cria uma tag 
 > Trabalho na nova feature e commit
 > 
 >```
-> git commit -m "Implementação da nova feature
+> git commit -m "Implementação da nova feature"
 >```
 > 
 > Mesclagem da feature na branch develop
@@ -141,7 +141,7 @@ Este comando mescla a branch de hotfix na branch develop e master, cria uma tag 
 > Teste e correção de bugs se necessário
 >
 > ```
-> git commit -m "Correção de bugs na release
+> git commit -m "Correção de bugs na release"
 > ```
 >
 > Mesclagem da release na branch develop e master
@@ -163,7 +163,7 @@ Este comando mescla a branch de hotfix na branch develop e master, cria uma tag 
 >```
 > Correção de bug crítico na hotfix
 >```
-> git commit -m "Correção de bug crítico
+> git commit -m "Correção de bug crítico"
 >```
 > Mesclagem da hotfix na branch master e develop
 >

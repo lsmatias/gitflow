@@ -1,6 +1,6 @@
 # GitFlow usando a extensão de comandos Git 
 
-A extensão Git é geralmente usada para estender os comandos básicos do Gitflow e não apenas uma estrutura de branchs.  O SCM, ou Sistema de Controle de Código Fonte (do inglês Source Code Management) usando em grandes projetos, diferete do artigo anterior sobre [GitHub Flow](https://github.com/lsmatias/githubflow) Flow, um modelo mais simples de controle de versão. O GitFlow é mais completo e supre complexidades em projetos de software maiores.
+A extensão Git é geralmente usada para estender os comandos básicos do Gitflow e não apenas uma estrutura de branchs.  O SCM, ou Sistema de Controle de Código Fonte (do inglês Source Code Management) usando em grandes projetos, diferete do artigo anterior sobre [GitHub Flow](https://github.com/lsmatias/githubflow) Flow, um modelo que aborda de maneira mais simples o controle de versão. O GitFlow é mais completo e supre complexidades em projetos de software maiores.
 
 > [!NOTE]
 > Git Flow é uma ferramenta que precisa ser instalada no seu sistema antes de ser utilizada. Certifique-se de ter o Git Flow instalado e configurado corretamente.

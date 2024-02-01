@@ -1,22 +1,75 @@
-# Gitflow
-GitFlow o Modelo de SCM
+# GitFlow usando a extensão de comando git
 
-O SCM (Source Code Management/Sistema de Controle de Versão) Git é um sistema de controle de versão distribuído amplamente utilizado para rastrear as mudanças em arquivos de código-fonte durante o desenvolvimento de software. Foi criado por Linus Torvalds em 2005 para o desenvolvimento do kernel do Linux e desde então se tornou uma das ferramentas mais populares para controle de versão.
+A extensão Git é geralmente usada para estender os comandos básicos do Gitflow e não apenas uma estrutura de branchs.  O SCM, ou Sistema de Controle de Código Fonte (do inglês Source Code Management) usando em grandes projetos, diferete do artigo anterior sobre [GitHub Flow](https://github.com/lsmatias/githubflow) Flow, um modelo mais simples de controle de versão. O GitFlow é mais completo e supre complexidades em projetos de software maiores.
 
-## Estrura de Branchs
-* **Main Branch:** Este branch é usado para refletir a versão mais recente do software que está em produção. Cada commit nesse branch deve representar uma versão estável e testada do código.
+# Estrutura do GitFlow com Extensão Git
 
-* **Develop Branch:** O branch de desenvolvimento onde todo o trabalho em andamento é consolidado. Os branches de feature são mesclados neste branch assim que estiverem prontos para serem testados em conjunto.
 
-* **Feature Branches:** Branches criados a partir do branch `develop` para desenvolver novas funcionalidades. Cada funcionalidade é desenvolvida em seu próprio branch e, quando concluída, é mesclada de volta no branch `develop`.
+```
+|-- master
+|
+|-- develop
+|   \
+|    \-- feature/...
+|
+|-- release/...
+|
+ \-- hotfix/...
+```
 
-* **Release Branches:** Ramificações preparadas para liberar uma versão específica do software. Esses branches são criados a partir do `develop` quando todas as funcionalidades planejadas para a próxima versão estão concluídas. Geralmente são usados para correções finais de bugs, testes e preparação para a versão final.
+<img width="584" alt="image" src="https://github.com/lsmatias/gitflow/assets/28391885/f7e7a381-3ffb-45a9-bfc6-3b1a9bda23b1">
 
-* **Hotfix Branches:** Branches criados a partir do `main` para corrigir problemas críticos em produção rapidamente. Estes branches visam corrigir bugs urgentes sem interferir no desenvolvimento regular do `develop`.
 
-* As configurações são auternativas que podem ser acresentadas nos movimentos dos branchs,
+* **Master**: A branch master representa a versão mais estável do seu projeto. As releases estáveis são mescladas nesta branch.
 
-* 
+* **Develop**: A branch develop é onde o desenvolvimento contínuo ocorre. As features são mescladas nesta branch quando estão prontas para serem testadas.
+
+* **Feature**: Cada nova funcionalidade é desenvolvida em uma branch feature separada, derivada da branch develop.
+
+* **Release**: Quando a branch develop atinge um ponto onde está pronta para ser lançada, uma branch release é criada. É aqui que as últimas correções de bugs podem ser aplicadas antes da release.
+
+* **Hotfix**: Se bugs críticos são encontrados na branch master, uma branch hotfix é criada para corrigir esses problemas.
+
+## Inicialização do Git Flow
+
+`git flow init`
+
+Este comando inicializa o repositório para o uso do Git Flow e cria as branches principais (master e develop) e definido por você os padrões de branchs de feature e suporte conforme configuração questionadas no terminal com forme imagem abaixo:
+
+<img width="927" alt="image" src="https://github.com/lsmatias/gitflow/assets/28391885/6e936a6c-31d6-43da-8304-27817db1f241">
+
+## Criar uma nova Feature
+
+`git flow feature start nome-da-feature`
+
+Este comando cria uma nova branch de **feature** baseada no branch **develop** para implementação de uma nova funcionalidade.
+
+<img width="937" alt="image" src="https://github.com/lsmatias/gitflow/assets/28391885/b3adbb21-a991-4e66-bf9b-5818eb2bfa85">
+
+## Concluir uma Feature
+
+`git flow feature finish nome-da-feature`
+
+Este comando faz o merge (mescla) o branch de **feature** no branch **develop** e a exclui após a conclusão.
+
+<img width="943" alt="image" src="https://github.com/lsmatias/gitflow/assets/28391885/24cf48b4-efc3-4c9b-b900-922329ae2872">
+
+# Nova Release
+
+## Criar uma nova Release
+`git flow release start 1.0.0`
+
+<img width="569" alt="image" src="https://github.com/lsmatias/gitflow/assets/28391885/2c64c26e-a532-4533-a701-50b185b86cdd">
+
+## Concluir uma Release
+
+`git flow release finish 1.0.0`
+
+Este comando mescla a branch de release na branch develop e master, cria uma tag para a versão e a exclui após a conclusão.
+
+<img width="588" alt="image" src="https://github.com/lsmatias/gitflow/assets/28391885/9594a0ef-ae24-45e5-ab57-ad7894ed4826">
+
+# Hotfix
 
 
 
